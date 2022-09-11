@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sep 12 Assignment</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <div class="navbar is-primary">
+        <div class="navbar-menu">
+
+            <div class="navbar-start">
+                <a class="navbar-item" href="https://bulma.io/">Home</a>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link" href="https://bulma.io/documentation/overview/start/">
+                        Docs
+                    </a>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="https://bulma.io/documentation/overview/start/">Overview</a>
+                        <a class="navbar-item" href="https://bulma.io/documentation/overview/modifiers/">Modifiers</a>
+                        <a class="navbar-item" href="https://bulma.io/documentation/columns/basics/">Columns</a>
+                        <a class="navbar-item" href="https://bulma.io/documentation/layout/container/">Layout</a>
+                        <a class="navbar-item" href="https://bulma.io/documentation/form/general/">Form</a>
+                        <hr class="navbar-divider">
+                        <a class="navbar-item" href="https://bulma.io/documentation/elements/box/">Elements</a>
+                        <a class="navbar-item is-active" href="https://bulma.io/documentation/components/breadcrumb/">Components</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <button class="button mr-4">
+                        <span class="icon">
+                            <i class="fab fa-twitter"></i>
+                        </span>
+                        <span>Tweet</span>
+                    </button>
+                    <button class="button is-primary">
+                        <span class="icon">
+                            <i class="fas fa-download"></i>
+                        </span>
+                        <span>Download</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container">
+            <div class="columns">
+    
+                <div class="column is-one-quarter">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-header-title">Component</div>
+                            <button class="card-header-icon">
+                                <span class="icon">
+                                    <i class="fas fa-angle-down"></i>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="card-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris. <a>@bulmaio.</a> <a>#css</a> <a>#responsive</a></p>
+                            <p>11:09 PM - 1 Jan 2016</p>
+                        </div>
+                        <div class="card-footer">
+                            <a class="card-footer-item">Save</a>
+                            <a class="card-footer-item">Edit</a>
+                            <a class="card-footer-item">Delete</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="column is-half">
+                    <div class="panel">
+
+                        <div class="tabs is-boxed">
+                            <ul>
+                                <li class="is-active">
+                                    <a>
+                                        <span class="icon is-small">
+                                            <i class="fas fa-clipboard-list"></i>
+                                        </span>
+                                        <span>Current</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                        <span class="icon is-small">
+                                            <i class="fas fa-calendar-times"></i>
+                                        </span>
+                                        <span>Completed</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                        <span class="icon is-small">
+                                            <i class="fas fa-calendar-day"></i>
+                                        </span>
+                                        <span>Upcoming</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                        <span class="icon is-small">
+                                            <i class="fas fa-calendar"></i>
+                                        </span>
+                                        <span>All</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="panel-block">
+                            <p class="control has-icons-left">
+                                <input class="input is-primary" type="text" placeholder="New Task">
+                                <span class="icon is-left">
+                                    <i class="fas fa-calendar-plus"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="panel-block">
+                            <input type="checkbox" checked>
+                            Notice that Bulma is pretty cool
+                        </div>
+                        <div class="panel-block">
+                            <input type="checkbox">
+                            Add some more features
+                        </div>
+                        <div class="panel-block">
+                            <input type="checkbox">
+                            Make a github account
+                        </div>
+                        <div class="panel-block">
+                            <input type="checkbox">
+                            Learn how to use github
+                        </div>
+                        <div class="panel-block">
+                            <input type="checkbox">
+                            Add a .gitignore file
+                        </div>
+
+                    </div>
+                </div>
+    
+                <div class="column is-one-quarter">
+                    <p class="title">Table of contents</p>
+                    <p class="subtitle">Intra-page navigation</p>
+                    
+                    <p class="menu">
+                        <p class="menu-label">General</p>
+                        <ul class="menu-list">
+                            <li><a>Dashboard</a></li>
+                            <li><a>Customers</a></li>
+                        </ul>
+                        <p class="menu-label">Administration</p>
+                        <ul class="menu-list">
+                            <li><a>Team Settings</a></li>
+                            <li>
+                                <a class="is-active">Manage Your Team</a>
+                                <ul>
+                                    <li><a>Members</a></li>
+                                    <li><a>Plugins</a></li>
+                                    <li><a>Add a member</a></li>
+                                </ul>
+                            </li>
+                            <li><a>Invitations</a></li>
+                            <li><a>Cloud Storage Environment Settings</a></li>
+                            <li><a>Authentication</a></li>
+                        </ul>
+                        <p class="menu-label">Transactions</p>
+                        <ul class="menu-list">
+                            <li><a>Payments</a></li>
+                            <li><a>Transfers</a></li>
+                            <li><a>Balance</a></li>
+                        </ul>
+                    </p>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
