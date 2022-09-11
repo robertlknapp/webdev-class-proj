@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sep 12 Assignment</title>
+
+    <style>
+        body {
+            margin: 0px;
+            background-color: rgb(213, 238, 213);
+            font-family: Arial;
+        }
+
+        .taskbar {
+            background-color: rgb(64, 148, 64);
+            height: 31px;
+            display: grid;
+            position: fixed;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            grid-template-columns: 100px 100px 100px;
+        }
+
+        .taskbar-item {
+            display: inline-block;
+            padding-top: 5px;
+            font-size: 18px;
+            padding-left: 10px;
+        }
+
+        .taskbar-item:hover .dropdown-hidden {
+            display: block;
+        }
+
+        .taskbar-item:hover {
+            background-color: rgb(67, 204, 67);
+        }
+
+        .dropdown-button {
+            margin-bottom: 5px;
+        }
+
+        .dropdown-hidden {
+            display: none;
+            color: rgb(54, 54, 54);
+            font-size: 16px;
+            padding: 5px 0px 5px 10px;
+            margin-left: -10px;
+        }
+
+        .dropdown-hidden:hover {
+            background-color: rgb(89, 255, 89)
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .center {
+            margin-top: 60px;
+        }
+
+        .section {
+            background-color: white;
+            margin: 25px;
+            padding: 0px 20px 15px 15px;
+        }
+
+        #section1 {
+            border-left: 5px solid rgb(64, 148, 64);
+        }
+
+        #section2 {
+            border-left: 5px solid rgb(233, 229, 23)
+        }
+
+        .section-title {
+            font-weight: 600;
+            font-size: 19px;
+            padding-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .section-content span {
+            font-weight: bold;
+            font-style: italic;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="taskbar">
+        <div class="taskbar-item">
+            <div class="dropdown-button"><b>File</b></div>
+            <a class="dropdown-hidden" href="#">New</a>
+            <a class="dropdown-hidden" href="#">Open</a>
+            <a class="dropdown-hidden" href="#">Save</a>
+            <a class="dropdown-hidden" href="#">Print</a>
+            <a class="dropdown-hidden" href="#">Close</a>
+        </div>
+        <div class="taskbar-item">
+            <div class="dropdown-button">Edit</div>
+            <a class="dropdown-hidden" href="#">Undo</a>
+            <a class="dropdown-hidden" href="#">Redo</a>
+            <a class="dropdown-hidden" href="#">Cut</a>
+            <a class="dropdown-hidden" href="#">Copy</a>
+            <a class="dropdown-hidden" href="#">Paste</a>
+            <a class="dropdown-hidden" href="#">Delete</a>
+            <a class="dropdown-hidden" href="#">Select All</a>
+        </div>
+        <div class="taskbar-item">
+            <div class="dropdown-button"><b>View</b></div>
+            <a class="dropdown-hidden" href="#">Zoom In</a>
+            <a class="dropdown-hidden" href="#">Zoom Out</a>
+            <a class="dropdown-hidden" href="#">Actual Size</a>
+            <a class="dropdown-hidden" href="#">Fit Page</a>
+            <a class="dropdown-hidden" href="#">Fit Width</a>
+            <a class="dropdown-hidden" href="#">Fit Height</a>
+            <a class="dropdown-hidden" href="#">Rotate Left</a>
+            <a class="dropdown-hidden" href="#">Rotate Right</a>
+            <a class="dropdown-hidden" href="#">Full Screen</a>
+        </div>
+    </div>
+
+    <div class="center">
+
+        <div class="section" id="section1">
+            <p class="section-title">Instructions</p>
+            <p class="section-content">
+                Recreate this page using <span>only CSS</span>. Do yourself a favor and 1) Do not view the source. Figure it out yourself. 2) Do not search for the solution. Learn CSS until you know enough to do this.
+            </p>
+        </div>
+
+        <div class="section" id="section2">
+            <p class="section-title">Extra Credit</p>
+            <p class="section-content">
+                Notice how the Edit menu (besides for not being bold) reacts to clicks. If you click the edit menu, it remains open until you click somewhere else. (This you might need to search for)
+            </p>
+        </div>
+
+    </div>
+</body>
+</html>
