@@ -3,6 +3,6 @@
 
 <template>
   <main>
-    <h1>HomeView here</h1>
+    <h1>User's posts here</h1>
   </main>
 </template>
