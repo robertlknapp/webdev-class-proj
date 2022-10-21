@@ -149,7 +149,7 @@
                 </span>
                 </span>
                 <span class="file-name">
-                Image Name
+                    Image Name
                 </span>
             </label>
         </div>
@@ -162,3 +162,11 @@
   </div>
 </div>
 </template>
+
+<style scoped>
+
+input[type=checkbox] {
+    accent-color: hsl(171, 100%, 29%);
+}
+
+</style>

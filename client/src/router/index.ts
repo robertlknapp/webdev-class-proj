@@ -43,8 +43,12 @@ const router = createRouter({
   ]
 })
 
+//reroutes if non logged in user attempting to access user pages
+//or non admin user attempting to access admin page
 router.beforeEach((to, from, next) => {
   if (to.name !== 'welcome' && session.user == null) {
+    next({ name: 'welcome' });
+  } else if (to.name == 'admin' && session.user?.admin != true) {
     next({ name: 'welcome' });
   } else {
     next();

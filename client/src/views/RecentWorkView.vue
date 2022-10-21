@@ -1,8 +1,9 @@
 <script setup lang="ts">
+
 </script>
 
 <template>
-  <main>
-    <h1>User's posts here</h1>
-  </main>
+
+User's cards go here.
+
 </template>

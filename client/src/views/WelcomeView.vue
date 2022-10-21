@@ -22,7 +22,7 @@
     </div>
     <div class="container mt-6">
       <h3 class="subtitle is-4">Progress / Notes:</h3>
-      <p>- Text here</p>
+      <p>- Admin page only in navigation bar for Robert account</p>
     </div>
 
   </main>

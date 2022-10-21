@@ -3,7 +3,7 @@
 import { ref } from 'vue';
 import { RouterLink } from 'vue-router';
 import LoginBadge from './LoginBadge.vue';
-import session, { login, logout } from '../stores/session'
+import session from '../stores/session'
 
 let isActive = ref(false);
 
@@ -49,7 +49,7 @@ let isActive = ref(false);
         <router-link class="navbar-item" to="/friends" v-if="session.user != null" style="border-radius: 30px 30px 0px 0px;">
             Friends
         </router-link>
-        <router-link to="/admin" class="navbar-item" v-if="session.user != null"  style="border-radius: 30px 30px 0px 0px;">
+        <router-link to="/admin" class="navbar-item" v-if="session.user?.admin == true"  style="border-radius: 30px 30px 0px 0px;">
             Admin Actions
         </router-link>
     </div>

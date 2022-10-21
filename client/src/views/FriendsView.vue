@@ -1,6 +1,8 @@
 <script setup lang="ts">
+
   import FriendsList from '../components/FriendsList.vue'
   import FriendActivityCard from '../components/FriendActivityCard.vue'
+
 </script>
 
 

@@ -6,14 +6,15 @@
   let isActive = ref(false);
   let varHeight = true;
 
+  //extends the div holding the friend list to fit them, needed on mobile layout
   function toggleVarHeight() {
     if(!varHeight && session?.user?.friends) {
       varHeight = true;
-      return (session.user.friends.length * 30) + 15;
+      return (session.user.friends.length * 40) + 10;
     }
     else {
       varHeight = false;
-      return -10;
+      return -1;
     }
   }
 
@@ -33,16 +34,14 @@
       </div>
   </div>
 
-  <div class="dropdown is-active is-block">
+  <div class="dropdown is-active is-block" style="width: 100%;">
         <a :style="{ borderRadius: '0px', marginBottom: toggleVarHeight() + 'px' }" class="button is-primary-dark is-fullwidth" @click="isActive = !isActive">
-          <span>View Friends</span>
+          <span class="has-text-weight-bold">View Friends</span>
         </a>
-      <div class="dropdown-menu" id="dropdown-menu" role="menu" v-if="isActive">
-        <div class="content">
-          <ul id="friendsList content">
-          <li class="ml-6" v-for="friend in session?.user?.friends">{{ friend.firstName }} {{ friend.lastName }}</li>
-          </ul>
-        </div>
+      <div class="dropdown-menu p-0" style="width: 100%;" id="dropdown-menu" v-if="isActive">
+          <a class="button is-fullwidth" v-for="friend in session?.user?.friends">
+            <span>{{ friend.firstName }} {{ friend.lastName }}</span>
+          </a>
       </div>
   </div>
 
