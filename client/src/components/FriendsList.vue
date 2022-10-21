@@ -4,16 +4,16 @@
   import session, {  } from '../stores/session'
 
   let isActive = ref(false);
-  let varHeight = -1;
+  let varHeight = true;
 
   function toggleVarHeight() {
-    if(varHeight == 0) {
-      varHeight = session.user.friends.length * 25;
-      return session.user.friends.length * 25;
+    if(!varHeight && session?.user?.friends) {
+      varHeight = true;
+      return (session.user.friends.length * 30) + 15;
     }
     else {
-      varHeight = 0;
-      return 0;
+      varHeight = false;
+      return -10;
     }
   }
 
@@ -38,11 +38,12 @@
           <span>View Friends</span>
         </a>
       <div class="dropdown-menu" id="dropdown-menu" role="menu" v-if="isActive">
-
-        <ul id="friendsList content">
-          <li class="list-item ml-6" v-for="friend in session.user.friends">{{ friend.firstName }} {{ friend.lastName }}</li>
-        </ul>
+        <div class="content">
+          <ul id="friendsList content">
+          <li class="ml-6" v-for="friend in session?.user?.friends">{{ friend.firstName }} {{ friend.lastName }}</li>
+          </ul>
+        </div>
       </div>
-    </div>
+  </div>
 
 </template>

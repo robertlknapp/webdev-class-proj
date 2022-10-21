@@ -17,8 +17,12 @@
     </div>
 
     <div class="container mt-6">
-      <h3 class="subtitle is-4">Current Progress</h3>
-      <p>- Have ability to make "blank" account? Then have dummy account to fill in fields?</p>
+      <h3 class="subtitle is-4">To Add:</h3>
+      <p>- Search existing users to add them as friends</p>
+    </div>
+    <div class="container mt-6">
+      <h3 class="subtitle is-4">Progress / Notes:</h3>
+      <p>- Text here</p>
     </div>
 
   </main>

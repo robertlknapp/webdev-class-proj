@@ -3,9 +3,9 @@ import { createPinia } from 'pinia'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faPersonWalking, faUserGroup, faAngleDown } from '@fortawesome/free-solid-svg-icons'
+import { faPersonWalking, faUserGroup, faAngleDown, faHeading, faCalendar, faClock, faLocationPin, faCamera } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faPersonWalking, faUserGroup, faAngleDown)
+library.add(faPersonWalking, faUserGroup, faAngleDown, faHeading, faCalendar, faClock, faLocationPin, faCamera)
 
 import App from './App.vue'
 import router from './router'

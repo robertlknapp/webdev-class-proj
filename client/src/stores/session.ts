@@ -6,19 +6,49 @@ const session = reactive( {
     user: null as User | null,
 });
 
-export function login(firstName: string, lastName: string) {
-    session.user = {
-        firstName,
-        lastName,
-        friends: [
-            new Friend('Anouk', 'isCool'),
-            new Friend('Ellie', 'isCool'),
-            new Friend('Crisp', 'isCool'),
-            new Friend('Rob', 'isCool'),
-            new Friend('Jane', 'Doe'),
-            new Friend('John', 'Smith'),
-        ]
-    };
+export function login(which: number) {
+
+        switch(which) {
+            case 1:
+                session.user = {
+                    firstName: 'Robert',
+                    lastName: 'Knapp',
+                    friends: [
+                        new Friend('Anouk', 'isCool'),
+                        new Friend('Ellie', 'isCool'),
+                        new Friend('Crisp', 'isCool'),
+                        new Friend('Jane', 'Doe'),
+                        new Friend('John', 'Smith'),
+                    ]
+                }
+                break;
+            case 2:
+                session.user = {
+                    firstName: 'John',
+                    lastName: 'Smith',
+                    friends: [
+                        new Friend('Anouk', 'isCool'),
+                        new Friend('Ellie', 'isCool'),
+                        new Friend('Crisp', 'isCool'),
+                        new Friend('Robert', 'Knapp'),
+                        new Friend('Jane', 'Doe'),
+                    ]
+                }
+                break;
+            case 3:
+                session.user = {
+                    firstName: 'Jane',
+                    lastName: 'Doe',
+                    friends: [
+                        new Friend('Anouk', 'isCool'),
+                        new Friend('Ellie', 'isCool'),
+                        new Friend('Crisp', 'isCool'),
+                        new Friend('Robert', 'Knapp'),
+                        new Friend('John', 'Smith'),
+                    ]
+                }
+                break;
+        }
 }
 
 export function logout() {
