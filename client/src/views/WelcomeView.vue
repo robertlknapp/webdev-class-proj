@@ -17,8 +17,9 @@
     </div>
 
     <div class="container mt-6">
-      <h3 class="subtitle is-4">To Add:</h3>
-      <p>- Search existing users to add them as friends</p>
+      <h3 class="subtitle is-4">To Do:</h3>
+      <p>- Search existing users to add them as friend</p>
+      <p>- Issue where temp friends card data disappears until refresh</p>
     </div>
     <div class="container mt-6">
       <h3 class="subtitle is-4">Progress / Notes:</h3>
