@@ -3,7 +3,7 @@
 import { ref } from 'vue';
 import { RouterLink } from 'vue-router';
 import LoginBadge from './LoginBadge.vue';
-import session from '../stores/session'
+import session from '../stores/session';
 
 let isActive = ref(false);
 
