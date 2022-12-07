@@ -1,8 +1,8 @@
 
 {
-  "name": "webdev-class",
+  "name": "webdev-final-project",
   "version": "1.0.0",
-  "description": "<img src=\"sept1class/2022self.jpg\" alt=\"Picture of me\" width=\"300\">",
+  "description": "Webdev final project",
   
   "scripts": {
     "build": "npm i -ws && npm run build -ws",
@@ -28,8 +28,6 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/robertlknapp/webdev-class/issues"
-  },
-
-  "homepage": "https://github.com/robertlknapp/webdev-class#readme"
+    "url": "https://github.com/robertlknapp/webdev-class-proj/issues"
+  }
 }

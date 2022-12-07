@@ -10,33 +10,37 @@ app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PATCH, DELETE');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-    next();
-  });
+  next();
+});
 
-app
-  .get('/', (req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('Server response here');
-  })
-  .get('/error', (req, res) => {
-    sss.PORT();
-  });
+app.use('/', express.static('./client/dist'));
+
+app.use(express.json());
 
 app
   .use('/api/posts', postController)
   .use('/api/users', userController);
 
-app
-  .get('*', (req, res) => {
-    res.sendFile('../client/index.html', {root: '../client/dist'});
-  })
-  .use((err, req, res, next) => {
+app.get('*', (req,res) => {
+  res.sendFile('index.html', {root: './client/dist'});
+});
+  
+app.use((err, req, res, next) => {
     console.log(err);
     res.status( err.httpCode ?? 500).send({
         message: err.message ?? 'Something went wrong',
         status: err.httpCode ?? 500
     })
+  });
+
+  app
+  .get('/', (req, res) => {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/plain');
+    res.end('Server response');
+  })
+  .get('/error', (req, res) => {
+    sss.PORT();
   });
 
 app.listen(port, () => {
