@@ -10,7 +10,7 @@
     "build": "npm i -ws && npm run build -ws"
   },
   "workspaces": [
-    "../client"
+    "./client"
   ],
   "dependencies": {
     "express": "^4.18.1"
