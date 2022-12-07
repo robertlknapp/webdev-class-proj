@@ -1,21 +1,35 @@
+
 {
-  "name": "webdevfinalproject",
+  "name": "webdev-class",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "<img src=\"sept1class/2022self.jpg\" alt=\"Picture of me\" width=\"300\">",
   
   "scripts": {
+    "build": "npm i -ws && npm run build -ws",
     "dev": "nodemon --watch server server/index.js",
-    "start": "node index.js",
-    "build": "npm i -ws && npm run build -ws"
+    "start": "node server/index.js"
   },
   "workspaces": [
-    "./client"
+    "client"
   ],
   "dependencies": {
     "express": "^4.18.1"
   },
+
   "devDependencies": {
     "nodemon": "^2.0.20"
-  }
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robertlknapp/webdev-class-proj.git"
+  },
+
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robertlknapp/webdev-class/issues"
+  },
+
+  "homepage": "https://github.com/robertlknapp/webdev-class#readme"
 }

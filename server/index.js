@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
-const postController = require('./server/controllers/posts');
-const userController = require('./server/controllers/users');
+const postController = require('./controllers/posts');
+const userController = require('./controllers/users');
 
 const hostname = '127.0.0.1';
 const port = process.env.PORT || 3000;
@@ -29,7 +29,7 @@ app
 
 app
   .get('*', (req, res) => {
-    res.sendFile('index.html', {root: './client/dist'});
+    res.sendFile('../client/index.html', {root: '../client/dist'});
   })
   .use((err, req, res, next) => {
     console.log(err);
