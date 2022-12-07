@@ -1,0 +1,65 @@
+
+{
+    "posts": [
+        {
+            "postId": 1,
+            "posterId": 1,
+            "title": "Ran around campus!",
+            "date": "October 17 2022",
+            "duration": 30,
+            "location": "SUNY New Paltz",
+            "userImg": "linkhere",
+            "activityType": "Running"
+        },
+        {
+            "postId": 2,
+            "posterId": 4,
+            "title": "Swam through the gunk",
+            "date": "October 16 2022",
+            "duration": 60,
+            "location": "SUNY New Paltz",
+            "userImg": "linkhere",
+            "activityType": "Swimming"
+        },
+        {
+            "postId": 3,
+            "posterId": 3,
+            "title": "Went rollerblading! Had a great time!",
+            "date": "October 16 2022",
+            "duration": 90,
+            "location": "Poughkeepsie",
+            "userImg": "linkhere",
+            "activityType": "Cardio"
+        },
+        {
+            "postId": 4,
+            "posterId": 2,
+            "title": "Morning jog",
+            "date": "October 15 2022",
+            "duration": 20,
+            "location": "SUNY New Paltz",
+            "userImg": "linkhere",
+            "activityType":"Running"
+        },
+        {
+            "postId": 5,
+            "posterId": 5,
+            "title": "I walked around town",
+            "date": "October 12 2022",
+            "duration": 25,
+            "location": "SUNY New Paltz",
+            "userImg": "linkhere",
+            "activityType":"Walking"
+        },
+        {
+            "postId": 6,
+            "posterId": 6,
+            "title": "Biking trip!",
+            "date": "October 17 2022",
+            "duration": 90,
+            "location": "Hudson Valley",
+            "userImg": "linkhere",
+            "activityType": "Biking"
+        }
+    ]
+}

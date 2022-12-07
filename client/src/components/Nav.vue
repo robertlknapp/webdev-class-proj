@@ -2,8 +2,7 @@
 
 import { ref } from 'vue';
 import { RouterLink } from 'vue-router';
-import LoginBadge from './LoginBadge.vue';
-import session from '../stores/session';
+import session, { logout } from '../stores/session';
 
 let isActive = ref(false);
 
@@ -40,10 +39,6 @@ let isActive = ref(false);
                 <router-link class="navbar-item" to="/statistics">
                     My Statistics
                 </router-link>
-            <hr class="navbar-divider">
-            <a class="navbar-item">
-                Report an issue
-            </a>
             </div>
         </div>
         <router-link class="navbar-item" to="/friends" v-if="session.user != null" style="border-radius: 30px 30px 0px 0px;">
@@ -55,9 +50,12 @@ let isActive = ref(false);
     </div>
 
     <div class="navbar-end">
-        <div class="navbar-item">
-            <login-badge></login-badge>
-        </div>
+        <router-link class="navbar-item" to="/login" v-if="session.user == null" style="border-radius: 30px 30px 0px 0px;">
+        Login
+        </router-link>
+        <a class="is-primary navbar-item" v-if="session.user !== null" style="border-radius: 30px 30px 0px 0px;" @click="logout">
+        Log Out
+        </a>
     </div>
 </div>
 </nav>

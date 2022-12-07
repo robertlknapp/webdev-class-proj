@@ -1,4 +1,5 @@
 <script setup lang="ts">
+
 </script>
 
 <template>
@@ -14,16 +15,6 @@
             </p>
           </div>
       </div>
-    </div>
-
-    <div class="container mt-6">
-      <h3 class="subtitle is-4">To Do:</h3>
-      <p>- Search existing users to add them as friend</p>
-      <p>- Issue where temp friends card data disappears until refresh</p>
-    </div>
-    <div class="container mt-6">
-      <h3 class="subtitle is-4">Progress / Notes:</h3>
-      <p>- Admin page only in navigation bar for Robert account</p>
     </div>
 
   </main>

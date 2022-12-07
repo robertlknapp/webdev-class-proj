@@ -5,6 +5,7 @@ import WelcomeViewVue from '@/views/WelcomeView.vue'
 import WorkStatsViewVue from '@/views/WorkStatsView.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import RecentWorkViewVue from '../views/RecentWorkView.vue'
+import LoginVue from '../views/LoginView.vue';
 import session, {  } from '../stores/session'
 
 const router = createRouter({
@@ -40,13 +41,18 @@ const router = createRouter({
       name: 'admin',
       component: AdminViewVue
     },
+    {
+      path: '/login',
+      name: 'login',
+      component: LoginVue
+    }
   ]
 })
 
 //reroutes if non logged in user attempting to access user pages
 //or non admin user attempting to access admin page
 router.beforeEach((to, from, next) => {
-  if (to.name !== 'welcome' && session.user == null) {
+  if (to.name !== 'welcome' && to.name !== 'login' && session.user == null) {
     next({ name: 'welcome' });
   } else if (to.name == 'admin' && session.user?.admin != true) {
     next({ name: 'welcome' });
@@ -55,4 +61,4 @@ router.beforeEach((to, from, next) => {
   }
 });
 
-export default router
+export default router;

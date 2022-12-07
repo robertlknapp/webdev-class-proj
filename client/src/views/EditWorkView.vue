@@ -1,8 +1,10 @@
 <script setup lang="ts">
 
     import { ref } from 'vue'
+    import session from '../stores/session';
   
     let activeIndex = ref(0);;
+    const isGoalActive = ref(true);
 
 </script>
 
@@ -24,23 +26,15 @@
                     <i class="fas fa-calendar-plus"></i>
                 </span>
               </div>
-              <input class="button is-primary is-outlined" type="submit" value="Add" style="border-radius: 0px 5px 5px 0px;">
+              <input class="button is-primary is-outlined" type="submit" value="Add" style="border-radius: 0px 5px 5px 0px;" @click="">
           </div>
         </div>
-        <div class="panel-block">
+        <div class="panel-block" v-for="goal in session?.user?.goals">
             <input type="checkbox">
-            Go on a walk twice
-        </div>
-        <div class="panel-block">
-            <input type="checkbox">
-            Go swimming
-        </div>
-        <div class="panel-block">
-            <input type="checkbox">
-            Include one strength exercise
+            {{ goal }}
         </div>
 
-        <button class="button is-primary is-fullwidth">Submit</button>
+        <button class="button is-primary is-fullwidth" @click="">Submit</button>
 
     </div>
   </div>
@@ -121,7 +115,7 @@
 
         <div class="panel-block">
             <p class="control has-icons-left">
-                <input class="input is-primary has-text-grey" type="text" placeholder="Duration">
+                <input class="input is-primary has-text-grey" type="text" placeholder="Duration (in minutes)">
                 <span class="icon is-left">
                     <font-awesome-icon icon="fa-solid fa-clock" />
                 </span>

@@ -1,7 +1,12 @@
 <script setup lang="ts">
 
-  import session, { allUsers } from '../stores/session';
+  import { ref } from 'vue';
+  import { getAllUsers, type user } from '../stores/users';
 
+  const users = ref([] as user[]);
+  users.value = await getAllUsers();
+  console.log(users.value);
+  
 </script>
 
 
@@ -19,10 +24,10 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="user in allUsers">
-          <th>{{ user.userID }}</th>
-          <th>{{ user.firstName }}</th>
-          <th>{{ user.lastName }}</th>
+        <tr v-for="user in users">
+          <th>{{ user.userId }}</th>
+          <th>{{ user.firstname }}</th>
+          <th>{{ user.lastname }}</th>
           <th>{{ user.email}}</th>
           <th>{{ user.admin }}</th>
           <th>

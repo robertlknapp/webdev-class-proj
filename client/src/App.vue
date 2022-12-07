@@ -12,7 +12,9 @@
   </header>
 
   <div>
+    <suspense>
     <RouterView />
+    </suspense>
   </div>
 
 </template>

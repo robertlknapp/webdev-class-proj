@@ -1,0 +1,105 @@
+{
+    "users": [
+        {
+            "firstname": "Robert",
+            "lastname": "Knapp",
+            "email": "robert@isCool.com",
+            "userId": 1,
+            "admin": true,
+            "friends": [
+                2,
+                3,
+                4
+            ],
+            "goals": [
+                "Go on a walk twice week of the 14th",
+                "Go hiking!"
+            ],
+            "finishedGoals": [
+                "Exercise twice a week in May",
+                "Try gunk-swimming"
+            ] 
+        },
+        {
+            "firstname": "John",
+            "lastname": "Smith",
+            "email": "john@smith.com",
+            "userId": 2,
+            "admin": false,
+            "friends": [
+                3,
+                4,
+                5
+            ],
+            "goals": [
+                "Get cardio in on the 7th",
+                "Morning jog this weekend"
+            ],
+            "finishedGoals": [
+                "Be able to do five consecutive pushups",
+                "Break my last track record"
+            ]
+        },
+        {
+            "firstname": "Jane",
+            "lastname": "Doe",
+            "email": "jane@doe.com",
+            "userId": 3,
+            "admin": false,
+            "friends": [
+                4,
+                5,
+                6
+            ],
+            "goals": [
+                "Weight lifting every Saturday and Wednesday this month"
+            ],
+            "finishedGoals": [
+                "Be able to complete usual sets with 20lb dumbbells",
+                "Take short afternoon walks every other day this month"
+            ]
+        },
+        {
+            "firstname": "Ellie",
+            "lastname": "isCool",
+            "email": "ellie@iscool.com",
+            "userId": 4,
+            "admin": false,
+            "friends": [
+                5,
+                6,
+                1
+            ],
+            "goals": [],
+            "finishedGoals": []
+        },
+        {
+            "firstname": "Anouk",
+            "lastname": "isCool",
+            "email": "anouk@iscool.com",
+            "userId": 5,
+            "admin": false,
+            "friends": [
+                6,
+                1,
+                2
+            ],
+            "goals": [],
+            "finishedGoals": []
+        },
+        {
+            "firstname": "Crisp",
+            "lastname": "isCool",
+            "email": "crisp@iscool.com",
+            "userId": 6,
+            "admin": false,
+            "friends": [
+                1,
+                2,
+                3
+            ],
+            "goals": [],
+            "finishedGoals": []
+        }
+    ]
+}
