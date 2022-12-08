@@ -43,6 +43,6 @@ app.use((err, req, res, next) => {
     sss.PORT();
   });
 
-app.listen(port, () => {
+/*app.listen(port, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
-});
+});*/
