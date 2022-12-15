@@ -2,10 +2,13 @@
 
   import session from '../stores/session';
   import type { user } from '../stores/users';
-  import { getUser, getFriendsByUser, getUsersByName } from '../stores/users';
-  import { computed, reactive, ref, watch } from "vue";
+  import { getUser, getFriendsByUser, getUsersByName, getUsersByFirstName } from '../stores/users';
+  import { computed, defineComponent, reactive, ref, watch, vue } from "vue";
   import type { post } from '../stores/posts';
   import { getAllPosts } from '../stores/posts';
+  import vSelect from 'vue-select';
+
+  vue.component('v-select', vSelect);
 
    // code needed for posts //
     const posts = ref([] as post[]);
@@ -116,6 +119,15 @@
     };
   };
 
+
+  //Autocomplete code WIP//
+    const userOptions = ref([] as user[]);
+
+    async function getOptions(firstnameSearch: string) {
+      userOptions.value = await getUsersByFirstName(firstnameSearch);
+      return userOptions.value;
+    };
+
 </script>
 
 
@@ -123,9 +135,10 @@
   <div class="columns is-desktop">
 
     <div class="column has-background-light is-one-quarter-desktop pr-0">
+
         <div class="field has-addons columns m-0 has-background-white">
         <p class="control has-icons-left column p-0">
-        <input class="input is-primary" type="text" placeholder="Search People" style="border-radius: 0px;" v-model="personName">
+        <v-select class="input is-primary" type="text" placeholder="Search People" style="border-radius: 0px;" v-model="personName" @search="getOptions"></v-select>
         <span class="icon is-left">
             <font-awesome-icon icon="fa-user-group" />
         </span>

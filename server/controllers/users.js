@@ -51,6 +51,16 @@ app
         } else {
             res.status(404).send('User not found for login');
         };
+    })
+    .get('/firstname/:firstname', (req, res) => {
+        const firstnameSearch = (req.params.firstname);
+        newUsers = users.getUsersByFirstName(firstnameSearch);
+        
+        if(newUsers) {
+            res.status(200).send(newUsers);
+        } else {
+            res.status(404).send('User not found');
+        };
     });
 
 module.exports = app;

@@ -21,10 +21,15 @@ function getUsersByName(firstnameNew, lastnameNew) {
     return data.users.filter(user => (user.firstname === firstnameNew && user.lastname === lastnameNew));
 };
 
+function getUsersByFirstName(firstnameNew) {
+    return data.users.filter(user => (user.firstname === firstnameNew));
+};
+
 module.exports = {
     getUser,
     getAllUsers,
     getFriendsByUser,
     getUsersByName,
-    getUserByEmail
+    getUserByEmail,
+    getUsersByFirstName
 };

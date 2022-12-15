@@ -36,3 +36,7 @@ export function getUsersByName(name: string) {
 export function getUserByEmail(email: string) {
     return myFetch<user>(`users/login/${email}`);
 };
+
+export function getUsersByFirstName(firstNameSearch: string) {
+    return myFetch<user[]>(`users/firstname/${firstNameSearch}`);
+};
